@@ -1,0 +1,44 @@
+% Copyright 2026 Dias Turdybek.
+% Licensed under the BSD-3-Clause.
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[
+    top=12mm,
+    bottom=12mm,
+    left=8mm,
+    right=8mm
+]{geometry}
+\pagestyle{empty}
+
+\usepackage[english]{babel}
+\raggedright
+\raggedbottom
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\scshape\large}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}[0pt]
+
+\usepackage{tabularx}
+\setlength{\tabcolsep}{0pt}
+\newcommand{\header}[2]{
+    \noindent
+    \begin{tabularx}{\textwidth}{X@{\hspace{4pt}}r}
+        #1 & #2
+    \end{tabularx}%
+}
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    label=\textbullet,
+    leftmargin=20pt,
+    labelsep=8pt,
+    topsep=4pt,
+    parsep=0pt,
+    partopsep=0pt
+}
