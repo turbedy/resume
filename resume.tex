@@ -1,0 +1,41 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[
+    top=14mm,
+    bottom=14mm,
+    left=12mm,
+    right=12mm
+]{geometry}
+\pagestyle{empty}
+
+\usepackage[english]{babel}
+\raggedbottom
+\raggedright
+
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\scshape\large}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{4pt}[0pt]
+
+\newcommand{\row}[2]{
+    \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+        {#1} & {#2} \\
+    \end{tabular*}%
+}
+\newcommand{\header}[2]{\row{\bfseries #1}{#2}}
+\newcommand{\subheader}[2]{\row{\itshape #1}{\itshape #2}}
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    label=\textbullet,
+    leftmargin=12pt,
+    labelsep=4pt,
+    topsep=4pt,
+    itemsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
